@@ -1,5 +1,5 @@
 <script setup>
-import { introText } from "@/constants/index";
+import { introText } from '@/constants/index'
 </script>
 
 <template>
@@ -24,17 +24,17 @@ import { introText } from "@/constants/index";
           <div>{{ introText.desc[2] }}</div>
         </div>
         <div class="img">
-          <img src="@assets/img/about.jpg" alt="어바웃" />
+          <img src="@/assets/img/about.jpg" alt="어바웃" />
         </div>
-        <div class="intro__lines bottom" aria-hidden="true">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </div>
+      </div>
+      <div class="intro__lines bottom" aria-hidden="true">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
       </div>
     </div>
   </section>
@@ -50,7 +50,7 @@ import { introText } from "@/constants/index";
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  flex-direction: columN;
+  flex-direction: column;
   padding: 16px;
 
   @media (max-width: 800px) {
@@ -62,7 +62,7 @@ import { introText } from "@/constants/index";
     text-transform: uppercase;
     line-height: 1;
     font-weight: 800;
-    word-spacing: nowrap;
+    white-space: nowrap;
     text-indent: -0.5vw;
     letter-spacing: -0.3vw;
 
@@ -73,7 +73,7 @@ import { introText } from "@/constants/index";
   .intro__text {
     width: 100%;
     height: 40vh;
-    background: var(--black);
+    background-color: var(--black);
     color: var(--white);
     display: flex;
     align-items: center;

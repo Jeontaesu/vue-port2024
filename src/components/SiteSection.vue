@@ -1,5 +1,5 @@
 <script setup>
-import { siteText } from "@/constants/index";
+import { siteText } from '@/constants/index'
 </script>
 
 <template>
@@ -7,16 +7,14 @@ import { siteText } from "@/constants/index";
     <div class="site__inner">
       <h2 class="site__title">Site coding <em>나의 작업물</em></h2>
       <div class="site__wrap">
-        <div class="site__item" v-for="(site, key) in siteText" :key="key">
+        <article class="site__item" v-for="(site, key) in siteText" :key="key">
           <span class="num">{{ key + 1 }}.</span>
           <div class="text">
             <div>{{ site.text[0] }}</div>
             <div>{{ site.text[1] }}</div>
             <div>{{ site.text[2] }}</div>
           </div>
-          <h3>
-            {{ site.title }}
-          </h3>
+          <h3 class="title">{{ site.title }}</h3>
           <div class="btn">
             <a :href="site.code">code</a>
             <a :href="site.view">view</a>
@@ -26,14 +24,14 @@ import { siteText } from "@/constants/index";
             <span>{{ site.info[1] }}</span>
             <span>{{ site.info[2] }}</span>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/mixin";
+@import '@/assets/scss/mixin';
 
 .site__inner {
   padding: 16px;

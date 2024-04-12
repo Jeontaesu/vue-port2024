@@ -1,5 +1,5 @@
 <script setup>
-import { contactText } from "@/constants/index";
+import { contactText } from '../constants'
 </script>
 
 <template>
@@ -15,6 +15,7 @@ import { contactText } from "@/constants/index";
         <span class="line"></span>
         <span class="line"></span>
       </div>
+
       <div class="contact__text">
         <div class="text">
           <div v-for="(contact, key) in contactText" :key="key">
@@ -22,6 +23,7 @@ import { contactText } from "@/constants/index";
           </div>
         </div>
       </div>
+
       <div class="contact__lines bottom" aria-hidden="true">
         <span class="line"></span>
         <span class="line"></span>
@@ -65,7 +67,6 @@ import { contactText } from "@/constants/index";
       display: none;
     }
   }
-
   .contact__text {
     width: 100%;
     height: 40vh;
@@ -96,70 +97,70 @@ import { contactText } from "@/constants/index";
       }
     }
   }
-}
-.contact__lines {
-  width: 100%;
-
-  .line {
-    display: block;
+  .contact__lines {
     width: 100%;
-    height: 1px;
-    background-color: var(--black);
-    margin-bottom: 0.5vw;
 
-    &:nth-child(1) {
-      height: 25px;
-    }
-    &:nth-child(2) {
-      height: 17px;
-    }
-    &:nth-child(3) {
-      height: 13px;
-    }
-    &:nth-child(4) {
-      height: 9px;
-    }
-    &:nth-child(5) {
-      height: 5px;
-    }
-    &:nth-child(6) {
-      height: 2px;
-    }
-    &:nth-child(7) {
-      height: 1px;
-    }
-  }
-
-  &.top {
     .line {
-      margin-top: 0.5vw;
-      margin-bottom: 0;
-      display: none;
-
-      @media (max-width: 800px) {
-        display: block;
-      }
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: var(--black);
+      margin-bottom: 0.5vw;
 
       &:nth-child(1) {
-        height: 1px;
+        height: 25px;
       }
       &:nth-child(2) {
-        height: 2px;
+        height: 17px;
       }
       &:nth-child(3) {
-        height: 5px;
+        height: 13px;
       }
       &:nth-child(4) {
         height: 9px;
       }
       &:nth-child(5) {
-        height: 13px;
+        height: 5px;
       }
       &:nth-child(6) {
-        height: 17px;
+        height: 2px;
       }
       &:nth-child(7) {
-        height: 25px;
+        height: 1px;
+      }
+    }
+
+    &.top {
+      .line {
+        margin-top: 0.5vw;
+        margin-bottom: 0;
+        display: none;
+
+        @media (max-width: 800px) {
+          display: block;
+        }
+
+        &:nth-child(1) {
+          height: 1px;
+        }
+        &:nth-child(2) {
+          height: 2px;
+        }
+        &:nth-child(3) {
+          height: 5px;
+        }
+        &:nth-child(4) {
+          height: 9px;
+        }
+        &:nth-child(5) {
+          height: 13px;
+        }
+        &:nth-child(6) {
+          height: 17px;
+        }
+        &:nth-child(7) {
+          height: 25px;
+        }
       }
     }
   }
