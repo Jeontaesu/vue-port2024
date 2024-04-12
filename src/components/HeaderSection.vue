@@ -8,7 +8,12 @@ import { headerNav } from '@/constants/index'
       <h1 class="header__logo">
         <a href="#">portfolio<em>vue.js</em></a>
       </h1>
-      <nav class="header__nav" role="navigation" aria-label="메인 메뉴">
+      <nav
+        class="header__nav"
+        role="navigation"
+        aria-label="메인 메뉴"
+        :class="{ show: isNavVisible }"
+      >
         <ul>
           <li v-for="(nav, key) in headerNav" :key="key">
             <a :href="nav.url" @click="scrollLink($event)">{{ nav.title }}</a>
